@@ -1,4 +1,5 @@
 
+import os
 import yagmail
 
 def SendEmail(to_email_addresses
