@@ -1,15 +1,15 @@
-# my_email
+# Description
 
-A Python library for sending emails
+A Python library by Dire Analytics for sending emails
 
 ## Installation
 
-pip install git+https://github.com/edire/my_email.git
+pip install git+https://github.com/edire/dmail.git
 
 ## Usage
 
 ```python
-from my_email.gmail import SendEmail
+from demail.gmail import SendEmail
 
 SendEmail(to_email_addresses='', subject='', body='', user='', password='')
 ```
