@@ -4,6 +4,7 @@ A Python library by Dire Analytics for sending emails
 
 ## Installation
 
+conda install lxml	# Python 3.11
 pip install git+https://github.com/edire/demail.git
 
 ## Usage
