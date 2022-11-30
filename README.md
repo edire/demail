@@ -4,7 +4,7 @@ A Python library by Dire Analytics for sending emails
 
 ## Installation
 
-pip install git+https://github.com/edire/dmail.git
+pip install git+https://github.com/edire/demail.git
 
 ## Usage
 
