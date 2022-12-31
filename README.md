@@ -22,3 +22,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 MIT License
+
+## Updates
+
+12/31/2022 - Added SendGrid.
