@@ -15,7 +15,8 @@ def SendEmail(to_email_addresses
               , from_email = os.getenv('email_from')
               , reply_to = os.getenv('email_reply_to')
               ):
-              
+    to_email_addresses = to_email_addresses.split(',')
+    
     mail = sgm.Mail(from_email=from_email
                     , to_emails=to_email_addresses
                     , subject=subject
@@ -46,10 +47,12 @@ def SendEmail(to_email_addresses
             mail.add_attachment(attachment)
 
     if cc_email_addresses != None:
+        cc_email_addresses = cc_email_addresses.split(',')
         for email_address in cc_email_addresses:
             mail.add_cc(email_address)
 
     if bcc_email_addresses != None:
+        bcc_email_addresses = bcc_email_addresses.split(',')
         for email_address in bcc_email_addresses:
             mail.add_bcc(email_address)
 

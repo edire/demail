@@ -25,4 +25,5 @@ MIT License
 
 ## Updates
 
+01/24/2023 - Updated modules to separate emails by commas into list.
 12/31/2022 - Added SendGrid.
