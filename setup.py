@@ -2,7 +2,7 @@
 from setuptools import setup
 setup(
     name='demail',
-    version='0.0.3',
+    version='0.0.4',
     author='Eric Di Re',
     description='Custom package for sending emails.',
     url='https://github.com/edire/demail.git',

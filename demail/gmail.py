@@ -11,11 +11,19 @@ def SendEmail(to_email_addresses
               , user=os.getenv('yagmail_user')
               , password=os.getenv('yagmail_password')
               ):
+    
     to_email_addresses = to_email_addresses.split(',')
+
     if cc_email_addresses is not None:
         cc_email_addresses = cc_email_addresses.split(',')
     if bcc_email_addresses is not None:
         bcc_email_addresses = bcc_email_addresses.split(',')
+
+    body = list(body)
+    for ele in range(len(body)):
+        if os.path.exists(body[ele]):
+            body[ele] = yagmail.inline(body[ele])
+
     yag = yagmail.SMTP(user=user, password=password)
     yag.send(to=to_email_addresses
              , subject=subject

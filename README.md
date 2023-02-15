@@ -25,5 +25,6 @@ MIT License
 
 ## Updates
 
-01/24/2023 - Updated modules to separate emails by commas into list.
+02/15/2023 - Updated gmail module to allow inline images.<br>
+01/24/2023 - Updated modules to separate emails by commas into list.<br>
 12/31/2022 - Added SendGrid.
