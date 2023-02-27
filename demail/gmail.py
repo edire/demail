@@ -19,10 +19,10 @@ def SendEmail(to_email_addresses
     if bcc_email_addresses is not None:
         bcc_email_addresses = bcc_email_addresses.split(',')
 
-    body = list(body)
-    for ele in range(len(body)):
-        if os.path.exists(body[ele]):
-            body[ele] = yagmail.inline(body[ele])
+    if body.__class__ == list:
+        for ele in range(len(body)):
+            if os.path.exists(body[ele]):
+                body[ele] = yagmail.inline(body[ele])
 
     yag = yagmail.SMTP(user=user, password=password)
     yag.send(to=to_email_addresses
