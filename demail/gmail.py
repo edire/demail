@@ -12,8 +12,11 @@ def SendEmail(to_email_addresses
               , password=os.getenv('yagmail_password')
               ):
     
-    to_email_addresses = to_email_addresses.split(',')
-
+    if to_email_addresses==None and cc_email_addresses==None and bcc_email_addresses==None:
+        raise Exception('No email addresses specified')
+    
+    if to_email_addresses is not None:
+        to_email_addresses = to_email_addresses.split(',')
     if cc_email_addresses is not None:
         cc_email_addresses = cc_email_addresses.split(',')
     if bcc_email_addresses is not None:
