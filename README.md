@@ -25,6 +25,7 @@ MIT License
 
 ## Updates
 
+05/26/2023 - Updated gmail to remove invalid email addresses.<br>
 05/26/2023 - Updated to allow sending emails to only bcc list.<br>
 02/27/2023 - Updated to allow string body as well as list body.<br>
 02/15/2023 - Updated gmail module to allow inline images.<br>
