@@ -39,6 +39,8 @@ def SendEmail(to_email_addresses
     all_email_addresses = to_email_addresses + cc_email_addresses + bcc_email_addresses
     if type(attach_file_address) == str:
         attach_file_address = [attach_file_address]
+    if not attach_file_address:
+        attach_file_address = []
 
     if to_email_addresses==None and cc_email_addresses==None and bcc_email_addresses==None:
         raise Exception('No valid email addresses specified')
