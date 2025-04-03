@@ -14,6 +14,7 @@ def SendEmail(to_email_addresses
               , bcc_email_addresses=None
               , from_email = os.getenv('email_from')
               , reply_to = os.getenv('email_reply_to')
+              , api_key = os.environ.get('SendGridAPIKey')
               ):
     to_email_addresses = to_email_addresses.split(',')
     
@@ -59,5 +60,5 @@ def SendEmail(to_email_addresses
     # with smtplib.SMTP_SSL('smtp.sendgrid.com', port=465) as smtp:
     #     smtp.login(email_user, email_password)
     #     smtp.send_message(msg)
-    sg = sendgrid.SendGridAPIClient(api_key = os.environ.get('SendGridAPIKey'))
+    sg = sendgrid.SendGridAPIClient(api_key)
     sg.send(mail)

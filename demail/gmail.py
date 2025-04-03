@@ -53,6 +53,8 @@ def SendEmail(to_email_addresses
 
     # Add body to email
     html_string = ""
+    if type(body) != list:
+        body = [body]
     for x in body:
         if os.path.exists(x):
             attach_file_address.append(x)

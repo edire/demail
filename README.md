@@ -25,6 +25,7 @@ MIT License
 
 ## Updates
 
+04/03/2025 - Fixed ability to send string for body.<br>
 02/17/2025 - Updated to Mime due to yagmail inline outdated for 3.12.<br>
 05/26/2023 - Updated gmail to remove invalid email addresses.<br>
 05/26/2023 - Updated to allow sending emails to only bcc list.<br>
